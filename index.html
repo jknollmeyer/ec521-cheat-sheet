@@ -1,8 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>Cheat Sheet!</head>
-</html>
-<body>
-    foo
+<head>
+    <title>Cheat Sheet!</title>
+</head>
+<body style="font-family: monospace">
+    <h3>Netcat</h3>
+    <p>Send data: nc  [IP address] [dest port] < [filename] </p> 
+    <p>Receive data: nc -l [receive port] > [filename] </p>
+
+    <h3>Cracking SSH keys</h3>
+    <p>"Authorized keys" format to RFC5208: ssh-keygen -e -m PKCS8 -f ssh_key.txt > RFC5208.pub</p>
+    <p>N and e from pubkey: openssl rsa -pubin -inform PEM -text -noout < RFC5208.pub</p>
+
+    <h3>Disk forensics</h3>
+    <p>Mount count and other goodies: debugfs -> show_super_stats</p>
+    <p>Recovering deleted files: </p>
+    <p>Detecting directories under inodes: fsstat</p>
+    
+
+    </h3>Other</h3>
+    <p>Regex for finding IP: /\b.{1,3}\..{1,3}\..{1,3}\b/</p>
+    <p><a href="http://shell-storm.org/shellcode/">Link to shellcode archive</a>
+    <p><a href="http://eli.thegreenplace.net/2011/09/06/stack-frame-layout-on-x86-64">64bit stack structure</a>
 </body>
 </html>
